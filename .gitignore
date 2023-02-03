@@ -1,0 +1,9 @@
+
+*.aux
+*.log
+*.out
+*.pdf
+vita.sublime-project
+vita.sublime-workspace
+
+
