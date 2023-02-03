@@ -1,0 +1,41 @@
+
+\documentclass[11pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[absolute]{textpos}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\definecolor{themecolor}{HTML}{2222FF}
+\urlstyle{rm}
+\hypersetup{
+	colorlinks = true,
+	urlcolor = themecolor,
+	linkcolor = themecolor
+}
+\setlength{\parskip}{0.5mm}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\rhead{\textit{List of Publications, Page~\thepage}}
+\cfoot{}
+
+\newcommand\category[1]{%
+	\noindent
+	{\color{themecolor}\fontsize{18}{22}\selectfont\textbf{#1}}
+	\par\noindent
+	\rule[0.7\baselineskip]{\textwidth}{0.4pt}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+\subfile{head.tex}
+\subfile{pubs.tex}
+
+\end{document}
