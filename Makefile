@@ -44,3 +44,4 @@ clean:
 		rm -f $$FILESTEM.out ; \
 		rm -f $$FILESTEM.pdf ; \
 	done
+	@ rm -f flags.tex
