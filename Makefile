@@ -29,6 +29,10 @@ vita-nopubs.pdf: $(SOURCES)
 	@ rm -f vita-nopubs.tex
 
 pubslist.pdf: $(SOURCES)
+	@ echo '' > flags.tex
+	@ echo $(ECHO_FLAGS) '\\newboolean{includepubs}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\setboolean{includepubs}{false}' >> flags.tex
+	@ echo '' >> flags.tex
 	@ $(TEXCOMPILER) $(basename $@)
 	@ $(TEXCOMPILER) $(basename $@)
 

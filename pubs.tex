@@ -2,28 +2,22 @@
 \documentclass[cv.tex]{subfiles}
 \begin{document}
 
-\begin{center}
-\category{Publications in Peer-Reviewed Astronomical Journals}
-\end{center}
-{\color{themecolor} \large NASA ADS Libraries}
-\par\noindent
-\parbox{0.18\textwidth}{%
-	\small\raggedleft
-	All Papers \par
-	Lead-Author \par
-	Co-Author \par
-}
-\hspace{1mm}
-\parbox{0.8\textwidth}{%
-	\small\vspace{1mm}
-	\url{https://ui.adsabs.harvard.edu/public-libraries/rIqfpNKmSdaOMIAhkk2VzQ}
-	\par
-	\url{https://ui.adsabs.harvard.edu/public-libraries/go1WSseGTMeft2SxdESAgw}
-	\par
-	\url{https://ui.adsabs.harvard.edu/public-libraries/sZkjSf_XRSKSRykqBe6B_w}
+% \ifthenelse{\boolean{includepubs}}{}{\begin{center}}
+% \category{Publications List}
+% \ifthenelse{\boolean{includepubs}}{}{\end{center}}
+
+\ifthenelse{\boolean{includepubs}}{%
+	% included list of publications in vita
+	\category{Journal Publications}
+}{
+	% separate list of publications
+	\begin{center}
+	\category{List of Publications in Astronomical Journals}
+	\end{center}
 }
 
-\par\null\par\null\par\noindent
+\vspace{-3mm}
+\noindent
 {\color{themecolor} \large Lead-Author Publications}
 (reverse chronological order)
 \par\noindent

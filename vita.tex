@@ -12,6 +12,8 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{ifthen}
+% \usepackage{makecell}
+% \usepackage{array}
 \definecolor{themecolor}{HTML}{2222FF}
 \urlstyle{rm}
 \hypersetup{
@@ -38,6 +40,8 @@
 \thispagestyle{empty} % no page number on first page
 \subfile{head.tex}
 \vspace{3mm}
+\subfile{jobs.tex}
+\vspace{5mm}
 \subfile{education.tex}
 \vspace{5mm}
 \subfile{awards.tex}
@@ -48,7 +52,8 @@
 \vspace{5mm}
 \subfile{misc.tex}
 \ifthenelse{\boolean{includepubs}}{%
-	\newpage
+	% \newpage
+	\vspace{5mm}
 	\subfile{pubs.tex}
 }{}
 
