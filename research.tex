@@ -24,7 +24,7 @@
 \metric{~180+} &
 \metric{~7}
 \\
-\verticallycentered{Publications} &
+\verticallycentered{Journal \\ Publications} &
 \verticallycentered{Lead Author} &
 \verticallycentered{Contributing \\ Author} &
 \verticallycentered{Citations} &
@@ -33,9 +33,33 @@
 \end{center}
 }
 
+%%% ADS LIBRARIES %%%
+\vspace{5mm}
+\noindent
+{\color{themecolor} \large NASA ADS Libraries}
+\ifthenelse{\boolean{includepubs}}{%
+	\small
+	(A full list of my journal publications is included.)
+}{}
+\par\noindent
+\parbox{0.18\textwidth}{%
+	\small\raggedleft
+	All Papers \par
+	Lead Author \par
+	Co-Author \par
+}
+\hspace{1mm}
+\parbox{0.8\textwidth}{%
+	\small\vspace{1mm}
+	\url{https://ui.adsabs.harvard.edu/public-libraries/rIqfpNKmSdaOMIAhkk2VzQ}
+	\par
+	\url{https://ui.adsabs.harvard.edu/public-libraries/go1WSseGTMeft2SxdESAgw}
+	\par
+	\url{https://ui.adsabs.harvard.edu/public-libraries/sZkjSf_XRSKSRykqBe6B_w}
+}
+
 %%% TALKS %%%
-\vspace{1cm}
-% \newpage
+\vspace{5mm}
 \noindent
 {\color{themecolor} \large Seminars \& Conference Presentations}
 \par\noindent
@@ -61,25 +85,6 @@
 	University of California at Santa Cruz
 }
 
-%%% SOFTWARE DEVELOPMENT %%%
-\vspace{5mm}
-\noindent
-{%
-{\color{themecolor}\large Astronomical Software Development}
-\par\noindent
-\parbox{0.35\textwidth}{%
-	\centering
-	\includegraphics[scale = 0.33]{vice-logo.png}
-}
-\parbox{0.63\textwidth}{%
-	\textbf{Versatile Integrator for Chemical Evolution (VICE)} \par
-	Lead developer and license owner (Spring 2018 - Present) \par
-	Documentation: \url{https://vice-astro.readthedocs.io} \par
-	Source Code: \url{https://github.com/giganano/VICE.git} \par
-	Install: \url{https://pypi.org/project/vice}
-}
-}
-
 %%% MENTORING %%%
 \vspace{5mm}
 \noindent
@@ -97,25 +102,23 @@
 	Senior Thesis, Summer Undergraduate Research Program
 }
 
-%%% ADS LIBRARIES %%%
+%%% SOFTWARE DEVELOPMENT %%%
 \vspace{5mm}
 \noindent
-{\color{themecolor} \large NASA ADS Libraries}
+{%
+{\color{themecolor}\large Astronomical Software Development}
 \par\noindent
-\parbox{0.18\textwidth}{%
-	\small\raggedleft
-	All Papers \par
-	Lead Author \par
-	Co-Author \par
+\parbox{0.35\textwidth}{%
+	\centering
+	\includegraphics[scale = 0.33]{vice-logo.png}
 }
-\hspace{1mm}
-\parbox{0.8\textwidth}{%
-	\small\vspace{1mm}
-	\url{https://ui.adsabs.harvard.edu/public-libraries/rIqfpNKmSdaOMIAhkk2VzQ}
-	\par
-	\url{https://ui.adsabs.harvard.edu/public-libraries/go1WSseGTMeft2SxdESAgw}
-	\par
-	\url{https://ui.adsabs.harvard.edu/public-libraries/sZkjSf_XRSKSRykqBe6B_w}
+\parbox{0.63\textwidth}{%
+	\textbf{Versatile Integrator for Chemical Evolution (VICE)} \par
+	Lead developer and license owner (Spring 2018 - Present) \par
+	Documentation: \url{https://vice-astro.readthedocs.io} \par
+	Source Code: \url{https://github.com/giganano/VICE.git} \par
+	Install: \url{https://pypi.org/project/vice}
+}
 }
 
 \end{document}
