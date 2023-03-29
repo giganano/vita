@@ -22,24 +22,24 @@ jobs:
         shell: bash
         run: |
           echo "" > flags.tex
-          echo -e "\\newboolean{includepubs}" >> flags.tex
-          echo -e "\\setboolean{includepubs}{true}" >> flags.tex
-          echo -e "\\begin{document}" >> flags.tex
-          echo -e "\\end{document}" >> flags.tex
+          echo "\newboolean{includepubs}" >> flags.tex
+          echo "\setboolean{includepubs}{true}" >> flags.tex
+          echo "\begin{document}" >> flags.tex
+          echo "\end{document}" >> flags.tex
           echo "" >> flags.tex
           cat flags.tex
 
-      - name: Compile
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: vita.tex
+      # - name: Compile
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     root_file: vita.tex
 
-      - name: Push
-        shell: bash
-        run: |
-          git config --global user.name "James W. Johnson"
-          git config --global user.email "43220904+giganano@users.noreply.github.com"
-          git checkout gh-pages
-          git add vita.pdf
-          git commit -m "[auto] ci: vita recompiled from main branch"
-          git push
+      # - name: Push
+      #   shell: bash
+      #   run: |
+      #     git config --global user.name "James W. Johnson"
+      #     git config --global user.email "43220904+giganano@users.noreply.github.com"
+      #     git checkout gh-pages
+      #     git add vita.pdf
+      #     git commit -m "[auto] ci: vita recompiled from main branch"
+      #     git push
