@@ -3,7 +3,7 @@ TEXCOMPILER := pdflatex
 SOURCES := $(wildcard *.tex)
 PLATFORM := $(shell uname -s)
 ifeq ($(PLATFORM), Linux)
-	ECHO_FLAGS := "-e"
+	ECHO_FLAGS := ""
 else
 	ECHO_FLAGS := ""
 endif
