@@ -18,7 +18,15 @@ jobs:
       #   shell: bash
       #   run: make vita.pdf
 
-      - name: Compiles
+      - name: Create Flags TeX File
+        shell: bash
+        run: |
+          echo "" > flags.tex
+          echo -e "\\newboolean{includepubs}" >> flags.tex
+          echo -e "\\setboolean{includepubs}{true}" >> flags.tex
+          echo "" >> flags.tex
+
+      - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
           root_file: vita.tex
