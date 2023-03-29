@@ -27,6 +27,7 @@ jobs:
           echo -e "\\begin{document}" >> flags.tex
           echo -e "\\end{document}" >> flags.tex
           echo "" >> flags.tex
+          cat flags.tex
 
       - name: Compile
         uses: xu-cheng/latex-action@v2
