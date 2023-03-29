@@ -45,7 +45,8 @@ jobs:
         run: |
           git config --global user.name "James W. Johnson"
           git config --global user.email "43220904+giganano@users.noreply.github.com"
+          git branch gh-pages
           git checkout gh-pages
           git add vita.pdf
           git commit -m "[auto] ci: vita recompiled from main branch"
-          git push
+          git push -u origin gh-pages
