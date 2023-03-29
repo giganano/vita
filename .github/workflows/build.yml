@@ -14,25 +14,30 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # - name: Compile
-      #   shell: bash
-      #   run: make vita.pdf
-
-      - name: Create Flags TeX File
+      - name: Install PdfLaTeX
         shell: bash
         run: |
-          echo "" > flags.tex
-          echo "\newboolean{includepubs}" >> flags.tex
-          echo "\setboolean{includepubs}{true}" >> flags.tex
-          echo "\begin{document}" >> flags.tex
-          echo "\end{document}" >> flags.tex
-          echo "" >> flags.tex
-          cat flags.tex
+          sudo apt-get install texlive-latex-base
 
       - name: Compile
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: vita.tex
+        shell: bash
+        run: make vita.pdf
+
+      # - name: Create Flags TeX File
+      #   shell: bash
+      #   run: |
+      #     echo "" > flags.tex
+      #     echo "\newboolean{includepubs}" >> flags.tex
+      #     echo "\setboolean{includepubs}{true}" >> flags.tex
+      #     echo "\begin{document}" >> flags.tex
+      #     echo "\end{document}" >> flags.tex
+      #     echo "" >> flags.tex
+      #     cat flags.tex
+
+      # - name: Compile
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     root_file: vita.tex
 
       - name: Push
         shell: bash
