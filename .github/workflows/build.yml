@@ -24,6 +24,8 @@ jobs:
           echo "" > flags.tex
           echo -e "\\newboolean{includepubs}" >> flags.tex
           echo -e "\\setboolean{includepubs}{true}" >> flags.tex
+          echo -e "\\begin{document}" >> flags.tex
+          echo -e "\\end{document}" >> flags.tex
           echo "" >> flags.tex
 
       - name: Compile
