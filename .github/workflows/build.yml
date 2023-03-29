@@ -14,9 +14,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Compile
-        shell: bash
-        run: make vita.pdf
+      # - name: Compile
+      #   shell: bash
+      #   run: make vita.pdf
+
+      - name: Compiles
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: vita.tex
 
       - name: Push
         shell: bash
