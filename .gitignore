@@ -2,7 +2,6 @@
 *.aux
 *.log
 *.out
-*.pdf
 flags.tex
 vita.sublime-project
 vita.sublime-workspace
