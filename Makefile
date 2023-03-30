@@ -2,11 +2,7 @@
 TEXCOMPILER := pdflatex
 SOURCES := $(wildcard *.tex)
 PLATFORM := $(shell uname -s)
-ifeq ($(PLATFORM), Linux)
-	ECHO_FLAGS := ""
-else
-	ECHO_FLAGS := ""
-endif
+ECHO_FLAGS := ""
 
 all: vita.pdf vita-nopubs.pdf pubslist.pdf
 
