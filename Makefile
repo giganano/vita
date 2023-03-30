@@ -15,7 +15,6 @@ vita.pdf: $(SOURCES)
 	@ echo $(ECHO_FLAGS) '\\newboolean{includepubs}' >> flags.tex
 	@ echo $(ECHO_FLAGS) '\\setboolean{includepubs}{true}' >> flags.tex
 	@ echo '' >> flags.tex
-	@ cat flags.tex
 	@ $(TEXCOMPILER) vita
 	@ $(TEXCOMPILER) vita
 
