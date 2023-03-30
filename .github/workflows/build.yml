@@ -18,14 +18,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      # - name: Checkout Repository
+      #   uses: actions/checkout@v3
 
       - name: Install PDFLaTeX
         shell: bash
         run: |
           sudo apt-get install texlive-latex-base
           sudo apt-get install texlive-latex-extra
+
+      - name: Clone and Configure Repository
+        shell: bash
+        run: |
+          git clone https://github.com/giganano/vita .
+          git config --global user.name "James W. Johnson"
+          git config --global user.email "43220904+giganano@users.noreply.github.com"
 
       - name: Compile
         shell: bash
@@ -34,9 +41,6 @@ jobs:
       - name: Push
         shell: bash
         run: |
-          git config --global user.name "James W. Johnson"
-          git config --global user.email "43220904+giganano@users.noreply.github.com"
-          git branch gh-pages
           git checkout gh-pages
           git pull
           git add -f vita.pdf
