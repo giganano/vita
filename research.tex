@@ -3,9 +3,8 @@
 \begin{document}
 
 \category{Research}
-
-%%% METRICS %%%
-\vspace{-1.0cm}
+%% METRICS %%%
+\vspace{-5mm}
 \noindent
 {%
 \newcommand{\verticallycentered}[1]{\begin{tabular}{c} #1 \end{tabular}}
@@ -21,8 +20,8 @@
 \metric{~15} &
 \metric{~6} &
 \metric{~9} &
-\metric{~250+} &
-\metric{~9}
+\metric{~255+} &
+\metric{~10}
 \\
 \verticallycentered{\textbf{Journal} \\ \textbf{Publications}} &
 \verticallycentered{\textbf{First Author}} &
@@ -40,11 +39,13 @@
 \ifthenelse{\boolean{includepubs}}{%
 	\small
 	(A full list of my journal publications is included.)
-}{}
+}{%
+	\small % preserves spacing between the two versions of the document
+}
 \par\noindent
 \parbox{0.18\textwidth}{%
 	\small\raggedleft
-	All Papers \par
+	All My Papers \par
 	First Author \par
 	Co-Author \par
 }
@@ -90,7 +91,7 @@
 \par\noindent
 \parbox{0.18\textwidth}{%
 	\raggedleft
-	2022 - Present \par
+	2022 -- Present \par
 	\null \par
 	\null
 }
