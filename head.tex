@@ -19,7 +19,13 @@
 	{%
 	\vspace{-1.5cm}%
 	\fontsize{30}{36} \selectfont James W. Johnson \par
-	\fontsize{20}{25} \selectfont Curriculum Vitae \par
+	\fontsize{20}{25} \selectfont \ifthenelse{\boolean{purepubslist}}{%
+		% just the list of publications
+		Publications List
+	}{%
+		Curriculum Vitae
+	} \par
+	% \fontsize{20}{25} \selectfont Curriculum Vitae \par
 	\fontsize{11}{13} \selectfont%
 	\vspace{0.08cm}%
 	\href{mailto:jjohnson10@carnegiescience.edu}{jjohnson10@carnegiescience.edu}%

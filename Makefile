@@ -10,6 +10,8 @@ vita.pdf: $(SOURCES)
 	@ echo '' > flags.tex
 	@ echo $(ECHO_FLAGS) '\\newboolean{includepubs}' >> flags.tex
 	@ echo $(ECHO_FLAGS) '\\setboolean{includepubs}{true}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\newboolean{purepubslist}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\setboolean{purepubslist}{false}' >> flags.tex
 	@ echo '' >> flags.tex
 	@ $(TEXCOMPILER) vita
 	@ $(TEXCOMPILER) vita
@@ -18,6 +20,8 @@ vita-nopubs.pdf: $(SOURCES)
 	@ echo '' > flags.tex
 	@ echo $(ECHO_FLAGS) '\\newboolean{includepubs}' >> flags.tex
 	@ echo $(ECHO_FLAGS) '\\setboolean{includepubs}{false}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\newboolean{purepubslist}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\setboolean{purepubslist}{false}' >> flags.tex
 	@ echo '' >> flags.tex
 	@ cp vita.tex vita-nopubs.tex
 	@ $(TEXCOMPILER) vita-nopubs
@@ -28,6 +32,8 @@ pubslist.pdf: $(SOURCES)
 	@ echo '' > flags.tex
 	@ echo $(ECHO_FLAGS) '\\newboolean{includepubs}' >> flags.tex
 	@ echo $(ECHO_FLAGS) '\\setboolean{includepubs}{false}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\newboolean{purepubslist}' >> flags.tex
+	@ echo $(ECHO_FLAGS) '\\setboolean{purepubslist}{true}' >> flags.tex
 	@ echo '' >> flags.tex
 	@ $(TEXCOMPILER) $(basename $@)
 	@ $(TEXCOMPILER) $(basename $@)
