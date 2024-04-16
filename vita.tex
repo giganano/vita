@@ -29,9 +29,10 @@
 
 \newcommand\category[1]{%
 	\noindent
-	{\color{themecolor}\fontsize{18}{22}\selectfont\textbf{\sc #1}}
+	{\color{themecolor}\fontsize{20}{25}\selectfont\textbf{\sc #1}}
+	\vspace{-2mm}
 	\par\noindent
-	\rule[0.7\baselineskip]{\textwidth}{0.4pt}
+	\rule[0.3\baselineskip]{\textwidth}{0.4pt}
 }
 \input{flags.tex}
 
@@ -41,19 +42,19 @@
 \subfile{head.tex}
 \vspace{3mm}
 \subfile{jobs.tex}
-\vspace{5mm}
+\vspace{4mm}
 \subfile{education.tex}
-\vspace{5mm}
+\vspace{4mm}
 \subfile{research.tex}
-\vspace{5mm}
+\vspace{4mm}
 \subfile{awards.tex}
-\vspace{5mm}
+\vspace{4mm}
 \subfile{teaching.tex}
-\vspace{5mm}
+\vspace{4mm}
 \subfile{misc.tex}
 \ifthenelse{\boolean{includepubs}}{%
 	% \newpage
-	\vspace{5mm}
+	\vspace{4mm}
 	\subfile{pubs.tex}
 }{}
 
