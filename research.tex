@@ -4,7 +4,11 @@
 
 \category{Research}
 %% METRICS %%%
-\vspace{-7mm}
+\ifthenelse{\boolean{includepubs}}{%
+	\vspace{-7mm}
+}{%
+	\vspace{-6mm}
+}
 \noindent
 {%
 \newcommand{\verticallycentered}[1]{\begin{tabular}{c} #1 \end{tabular}}
@@ -23,7 +27,7 @@
 \metric{~39} &
 \metric{~14} &
 \metric{~25} &
-\citationcount{~1,100+} &
+\citationcount{~1,300+} &
 \metric{~19}
 \\
 \verticallycentered{\textbf{Journal} \\ \textbf{Publications}} &
@@ -36,11 +40,12 @@
 }
 
 %%% INTERESTS %%%
+\vspace{2mm}
 \noindent
 {\color{themecolor} \large Interests}
 \par\noindent
 Galactic chemical evolution -- The Milky Way -- Dwarf galaxies -- The
-astrophysical origin of the elements -- Big bang nucleosynthesis -- Near field
+astrophysical origin of the elements -- Big Bang nucleosynthesis -- Near field
 cosmology -- Astronomical software
 
 %%% ADS LIBRARIES %%%
@@ -49,9 +54,10 @@ cosmology -- Astronomical software
 {\color{themecolor} \large NASA ADS Libraries}
 \ifthenelse{\boolean{includepubs}}{%
 	\small
-	(A full list of my journal publications is included.)
+	(A full list of my journal publications is included.) \par
 }{%
 	\small % preserves spacing between the two versions of the document
+	% \vspace{1mm}
 }
 \par\noindent
 \parbox{0.18\textwidth}{%
@@ -72,96 +78,7 @@ cosmology -- Astronomical software
 	\url{https://ui.adsabs.harvard.edu/public-libraries/sZkjSf_XRSKSRykqBe6B_w}
 }
 
-%%% TALKS %%%
-\vspace{3mm}
-\noindent
-{\color{themecolor} \large Seminars \& Conference Presentations}
-\par
-\vspace{1mm}
-\noindent
-\parbox{0.18\textwidth}{%
-	\vspace{-1mm}
-	\raggedleft
-	Invited Talk \par
-	\null \par
-	Invited Talk \par
-}
-\hspace{1mm}
-\parbox{0.8\textwidth}{%
-	\textbf{APOGEE's Galactic Odyssey} \hfill 2026 \par
-	Centro de Estudios de Fisica del Cosmos de Arag{\'o}n (Teruel, Spain) \par
-	\textbf{Galactic Metal Cycles}, University of Notre Dame (Kylemore Abbey,
-	Ireland) \hfill 2026 \par
-}
-
 \newpage
-\noindent
-\parbox{0.18\textwidth}{%
-	\raggedleft
-	Invited Seminar \par
-	Invited Seminar \par
-	Invited Seminar \par
-	Poster \par
-	\null \par
-	Invited Talk \par
-	\null \par
-	Invited Seminar \par
-	Contributed Talk \par
-	\null \par
-	Contributed Talk \par
-	\null \par
-	Dissertation Talk \par
-	Contributed Talk \par
-	\null \par
-	Poster \par
-	Invited Seminar \par
-	\null \par
-	Contributed Talk \par
-	Contributed Talk \par
-	Contributed Talk \par
-	Contributed Talk \par
-	Contributed Talk \par
-}
-\hspace{1mm}
-\parbox{0.8\textwidth}{%
-	\textbf{University of California, Davis}, Dept. of Physics and Astronomy (Davis, CA)
-	\hfill 2025 \par
-	\textbf{Stockholms Universitet}, Dept. of Astronomy (Stockholm, Sweden)
-	\hfill 2025 \par
-	\textbf{Uppsala Universitet}, Dept. of Physics \& Astronomy
-	(Uppsala, Sweden) \hfill 2025 \par
-	\textbf{Small Galaxies, Cosmic Questions - II} \hfill 2024 \par
-	University of Durham (Durham, United Kingdom) \par
-	\textbf{DHWFEST: Dark, Hot, Warm, and Fuzzy mattEr in Space and Time}
-	\hfill 2024 \par
-	University of Utah (Salt Lake City, UT) \par
-	\textbf{Lund University}, Dept. of Physics (Lund, Sweden) \hfill 2024 \par
-	\textbf{ADONIS: Abundance Gradients in the Local Universe}
-	\hfill 2024 \par
-	Munich Institute for Astro-, Particle, and BioPhysics (MIAPbP)
-	(Munich, Germany) \par
-	\textbf{Surveying the Milky Way: The Universe in Our Own Backyard}
-	\hfill 2023 \par
-	California Institute of Technology (Pasadena, CA) \par
-	\textbf{241$^\text{st}$ American Astronomical Society Meeting} (Seattle, WA)
-	\hfill 2023 \par
-	\textbf{GALactic Archaeology with Hermes (GALAH) Science Meeting}
-	\hfill 2021 \par
-	(virtual) \par
-	\textbf{236$^\text{th}$ American Astronomical Society Meeting} (virtual)
-	\hfill 2020 \par
-	\textbf{University of California, Santa Cruz} (Santa Cruz, CA) \hfill 2019
-	\par
-	\textbf{Sloan Digital Sky Survey (SDSS) Collaboration Meetings} \par
-	\qquad Katholieke Universiteit Leuven (Leuven, Belgium) \hfill 2026 \par
-	\qquad Max Planck Institut f{\"u}r Astronomie (Heidelberg, Germany) \hfill 2025 \par
-	\qquad New Mexico State University (Las Cruces, NM) \hfill 2024 \par
-	\qquad Virtual \hfill 2021 \par
-	\qquad Virtual \hfill 2020 \par
-}
-
-
-
 %%% SOFTWARE DEVELOPMENT %%%
 \vspace{4mm}
 \noindent
@@ -176,7 +93,7 @@ cosmology -- Astronomical software
 	Lead developer and license owner (Spring 2018 -- Present) \par
 	Documentation: \url{https://vice-astro.readthedocs.io} \par
 	Source Code: \url{https://github.com/giganano/VICE.git} \par
-	Install: \url{https://pypi.org/project/vice}
+	Install: \url{https://pypi.org/project/vice} \par
 }
 
 %%% Observing Programs %%%
@@ -185,18 +102,120 @@ cosmology -- Astronomical software
 {\color{themecolor} \large Observing Programs}
 \par\noindent
 \textbf{PI}: \textit{The First Extragalactic Measure of the Helium Isotopic
-Ratio -- A New Test of Fundamental Physics}
+Ratio - A New Test of Fundamental Physics} \par
+\hspace{0.5\parindent}
+Clay 6.5-m Telescope, Las Campanas Observatory
 \par \noindent
 \parbox{0.18\textwidth}{%
 	\raggedleft
 	2024B \par
-	2025A
+	2025A \par
 }
 \hspace{1mm}
 \parbox{0.8\textwidth}{%
-	WINERED spectrograph, 18 hours (Clay 6.5-m Telescope, Las Campanas
-	Observatory) \par
-	MIKE spectrograph, 6 hours (Clay 6.5-m Telescope, Las Campanas Observatory)
+	WINERED spectrograph, 18 hours \par
+	MIKE spectrograph, 6 hours \par
+}
+
+%%% TALKS %%%
+\vspace{4mm}
+\noindent
+{\color{themecolor} \large Invited Talks}
+\par
+\vspace{1mm}
+\noindent
+\parbox{0.18\textwidth}{%
+	% \vspace{-1mm}
+	\raggedleft
+	2026 \par
+	\null \par
+	2026 \par
+	\null \par
+	2026 \par
+	\null \par
+	2025 \par
+	2025 \par
+	2025 \par
+	2024 \par
+	\null \par
+	2024 \par
+	2019 \par
+}
+\hspace{1mm}
+\parbox{0.8\textwidth}{%
+	\textbf{Everything FLOWS} \hfill Conference \par
+	University of Groningen (Groningen, The Netherlands) \par
+	\textbf{APOGEE's Galactic Odyssey} \hfill Conference \par
+	Centro de Estudios de Fisica del Cosmos de Arag{\'o}n (Teruel, Spain) \par
+	\textbf{Galactic Metal Cycles} \hfill Conference \par
+	University of Notre Dame (Kylemore Abbey, Ireland) \par
+	\textbf{University of California, Davis} (Davis, California)
+	\hfill Seminar\par
+	\textbf{Stockholms Universitet} (Stockholm, Sweden) \hfill Seminar \par
+	\textbf{Uppsala Universitet} (Uppsala, Sweden) \hfill Seminar \par
+	\textbf{DHWFEST} \hfill Conference \par
+	University of Utah (Salt Lake City, Utah) \par
+	\textbf{Lund University} (Lund, Sweden) \hfill Seminar \par
+	\textbf{University of California, Santa Cruz} (Santa Cruz, CA)
+	\hfill Seminar \par
+}
+
+\vspace{4mm}
+\noindent
+{\color{themecolor} \large Conference Presentations}
+\par
+\vspace{1mm}
+\noindent
+\parbox{0.18\textwidth}{%
+	\vspace{1mm}
+	\raggedleft
+	\null \par
+	2026 \par
+	2025 \par
+	2024 \par
+	2024 \par
+	\null \par
+	2023 \par
+	\null \par
+	2023 \par
+	\null \par
+	2021 \par
+	2020, 2021 \par
+}
+\hspace{1mm}
+\parbox{0.8\textwidth}{%
+	\textbf{SDSS Collaboration Meeting} \par
+	Katholieke Universiteit Leuven (Leuven, Belgium) \par
+	Max Planck Institut f{\"u}r Astronomie (Heidelberg, Germany) \par
+	New Mexico State University (Las Cruces, NM) \par
+	\textbf{ADONIS: Abundance Gradients in the Local Universe} \par
+	\mbox{Munich Institute for Astro-, Particle, and BioPhysics (MIAPbP; %
+	Munich, Germany)} \par
+	\textbf{Surveying the Milky Way: The Universe in Our Own Backyard} \par
+	California Institute of Technology (Pasadena, CA) \par
+	\textbf{241$^\text{st}$ American Astronomical Society Meeting}
+	(Dissertation Talk) \par
+	Seattle, Washington Convention Center \par
+	\textbf{GALAH Science Meeting} (Virtual) \par
+	\textbf{SDSS Collaboration Meeting} (Virtual) \par
+}
+
+\vspace{4mm}
+\noindent
+{\color{themecolor} \large Posters}
+\par
+\vspace{1mm}
+\noindent
+\parbox{0.18\textwidth}{%
+	\raggedleft
+	2024 \par
+	2020 \par
+}
+\hspace{1mm}
+\parbox{0.8\textwidth}{%
+	\textbf{Small Galaxies, Cosmic Questions -- II},
+	Durham University (Durham, England) \par
+	\textbf{236$^\text{th}$ American Astronomical Society Meeting} (virtual) \par
 }
 
 \end{document}
